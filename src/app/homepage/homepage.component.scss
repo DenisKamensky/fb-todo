@@ -1,0 +1,74 @@
+.wrapper{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.todo{
+  width: 320px;
+  box-shadow: 0px 2px 2px rgba(0,0,0, .3);
+  &__form{
+    box-shadow: 0px 2px 3px rgba(0,0,0, .3);
+    background-color: #1A237E;
+    padding: 15px;
+    &::after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+  &__input,
+  &__save-btn{
+    display: block;
+    float: left;
+    border: none;
+    height: 24px;
+    font-size: 16px;
+    padding: 0;
+    line-height: 24px;
+    border-radius: 0;
+  }
+  &__input{
+    padding: {
+      right: 10px;
+      left: 10px;
+    };
+    width: calc(100% - 70px);
+    background-color: #E8EAF6;
+    box-sizing: border-box;
+  }
+  &__save-btn{
+    margin-left: 10px;
+    width: 60px;
+    text-align: center;
+  }
+  &__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item{
+    border-bottom: 1px solid #ccc;
+    &:last-of-type{
+      border-bottom: none;
+    }
+  }
+}
+.todo-item{
+  padding: 15px;
+  &__title{
+    margin-top: 0;
+    font-size: 18px;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+  &__date{
+    margin: 0;
+    color: #ccc;
+    text-align: right;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="todo">
+    <form class="todo__form" (submit)="onSubmit($event)">
+      <input type="text" class="todo__input" [(ngModel)]="taskName" name="task-name" maxlength="100" placeholder="Need todo..">
+      <button class="todo__save-btn">Save</button>
+    </form>
+    <ul class="todo__list">
+      <li class="todo__item todo-item" *ngFor="let todo of todos |async">
+        <h2 class="todo-item__title">{{ todo.name }}</h2>
+        <p class="todo-item__date">{{ todo.date| date:'MMM dd hh:mm' }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
